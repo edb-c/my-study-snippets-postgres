@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20180915005754) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "snippets", force: :cascade do |t|
     t.string   "snippet_category"
     t.string   "snippet_name"

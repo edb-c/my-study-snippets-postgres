@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mssdb
+  pool: 2
+  username: ecofresi
+  password:
