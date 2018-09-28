@@ -38,12 +38,21 @@ class SnippetController < ApplicationController
 
 #Get Route to Show all Snippets to Registered User
 
+#  get '/snippets/:id' do
+#    redirect_if_not_logged_in
+
+#    if logged_in?
+#      erb :'snippets/show'
+#    else
+#      erb :'snippets/index'
+#    end
+#  end
+
   get '/snippets/:id' do
-    if logged_in?
-      erb :'snippets/show'
-    else
-      erb :'snippets/index'
-    end
+
+    redirect_if_not_logged_in
+    erb :'snippets/show'
+    
   end
 
 #Get Route to Show all Snippets to Any User
